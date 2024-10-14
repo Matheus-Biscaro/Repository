@@ -5,13 +5,16 @@
     "express": "^4.21.1",
     "helmet": "^8.0.0",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
     "node": "^20.18.0"
   },
   "name": "api",
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch src/index.js"
   },
   "keywords": [],
   "author": "",
