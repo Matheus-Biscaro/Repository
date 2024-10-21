@@ -8,7 +8,9 @@ const path = require('path');
 const routes = require('./routes/routes');
 const db = require('./db/db');                                 //Módulo de conexão com o banco de dados
 
+const clienteRoutes = require('./routes/clienteroutes');       //Importa as rotas de clientes
 const corsOptions = {
+
     origin: ['http://localhost:3333', 'https://meudominio.com'], // Lista de origens permitidas
     methods: 'GET, POST, PUT, DELETE', //Métodos HTTP permitidos
     credentials: true, // Permite envio de cookies 
@@ -34,6 +36,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'pages', 'home.html'));
 })
 
+// Configuração de rotas
+app.use('/', clienteRoutes); 
 
 // Configuração de rotas
 app.use('/', routes);
